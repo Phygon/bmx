@@ -13,6 +13,11 @@ set(tests
     vc3_1080p_1237 32 "x"
     vc3_1080p_1238 33 "x"
     vc3_1080p_1253 40 "x"
+    vc3_dnxhr_444 63 "x"
+    vc3_dnxhr_hqx 64 "x"
+    vc3_dnxhr_hq 65 "x"
+    vc3_dnxhr_sq 66 "x"
+    vc3_dnxhr_lb 67 "x"
 )
 
 run_tests("${tests}" 3)

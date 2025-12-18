@@ -118,6 +118,9 @@ function(run_tests tests duration)
         if(test_in STREQUAL "unc")
             set(test ${test_in})
             list(APPEND extra_video_opts --height 576)
+        elseif(test_in MATCHES "vc3_dnxhr_.*")
+            set(test ${test_in})
+            list(APPEND extra_video_opts --width 1920 --height 1080)
         else()
             # Separate the _gf and _gfp suffixes used for the growing file tests
             # and add extra options
@@ -134,7 +137,7 @@ function(run_tests tests duration)
                 endif()
             endif()
         endif()
-        
+
         math(EXPR test_ess_type_index "${index} * 3 + 1")
         list(GET tests ${test_ess_type_index} test_ess_type)
 
