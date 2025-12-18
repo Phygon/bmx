@@ -712,7 +712,7 @@ static void usage(const char *cmd)
     printf("                            Add locator at <position> with <comment> and <color>\n");
     printf("                            <position> format is o?hh:mm:sscff, where the optional 'o' indicates it is an offset\n");
     printf("    --umid-type <type>      Set the UMID type that is generated for the Package UID properties.\n");
-    printf("                            The default <type> is 'aafsdk'.\n");
+    printf("                            The default <type> is 'uuid'.\n");
     printf("                            The <type> is one of the following:\n");
     printf("                              uuid       : UUID generation method\n");
     printf("                              aafsdk     : same method as implemented in the AAF SDK\n");
@@ -929,7 +929,7 @@ int main(int argc, const char** argv)
     const char *originator = DEFAULT_BEXT_ORIGINATOR;
     set<WaveChunkId> exclude_wave_chunks;
     bool exclude_all_wave_chunks = false;
-    AvidUMIDType avid_umid_type = AAFSDK_UMID_TYPE;
+    AvidUMIDType avid_umid_type = UUID_UMID_TYPE;
     UMID mp_uid = g_Null_UMID;
     bool mp_uid_set = false;
     Timestamp mp_created;

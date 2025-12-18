@@ -621,7 +621,7 @@ static void usage(const char *cmd)
     printf("                            Add locator at <position> (in frame rate units) with <comment> and <color>\n");
     printf("                            <position> format is o?hh:mm:sscff, where the optional 'o' indicates it is an offset\n");
     printf("    --umid-type <type>      Set the UMID type that is generated for the Package UID properties.\n");
-    printf("                            The default <type> is 'aafsdk'.\n");
+    printf("                            The default <type> is 'uuid'.\n");
     printf("                            The <type> is one of the following:\n");
     printf("                              uuid       : UUID generation method\n");
     printf("                              aafsdk     : same method as implemented in the AAF SDK\n");
@@ -972,7 +972,7 @@ int main(int argc, const char** argv)
     uint8_t d10_mute_sound_flags = 0;
     uint8_t d10_invalid_sound_flags = 0;
     const char *originator = DEFAULT_BEXT_ORIGINATOR;
-    AvidUMIDType avid_umid_type = AAFSDK_UMID_TYPE;
+    AvidUMIDType avid_umid_type = UUID_UMID_TYPE;
     UMID mp_uid = g_Null_UMID;
     bool mp_uid_set = false;
     Timestamp mp_created;
